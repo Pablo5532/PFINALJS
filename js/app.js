@@ -88,9 +88,9 @@ const pintarProductosCarrito = (producto) => {
     console.log(producto)
     const contenedor = document.getElementById("contenedorCarrito");
     const div = document.createElement('div')
-    div.classList.add("flex,justify-evenly,flex-wrap,mt-10")
+    div.classList.add("flex,justify-around,flex-wrap,text-center")
     div.innerHTML= `
-    <p class="flex justify-around ml-8 text-center text-black">${producto.title} ${producto.color}<span class="text-black text-center">${producto.price}</span></p>
+    <p class="flex justify-around ml-8 mt-5 text-center text-black">${producto.title} ${producto.color}<span class="text-black text-center">${producto.price}</span></p>
     <p class="text-center text-black flex justify-end mr-10" id="cantCarrito${producto.id}">Cantidad: ${producto.Stock}</p>
     <button type="button" class=" px-6 py-2.5 bg-red-600 text-red font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out btn" id="delete-${producto.id}">Eliminar</button>
     `
@@ -137,7 +137,7 @@ const actualizarCarrito = (carrito) => {
         div.innerHTML= `
         <p class="flex justify-around ml-8 text-center text-black">${producto.title} ${producto.color}<span class="text-black text-center">${producto.price}</span></p>
         <p class="text-center text-black flex justify-end mr-10" id="cantCarrito">Cantidad: ${producto.Stock}</p>
-        <button type="button" class=" px-6 py-2.5 bg-red-600 text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out btn" id="delete-${producto.id}">Eliminar</button>
+        <button type="button" class=" px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out btn" id="delete-${producto.id}">Eliminar</button>
         `
         contenedor.appendChild(div);
 
@@ -146,3 +146,12 @@ const actualizarCarrito = (carrito) => {
         });
     });
 };
+
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 200) { // Cambia este valor según tus necesidades
+        nav.classList.add('scroll');
+    } else {
+        nav.classList.remove('scroll');
+    }
+});
