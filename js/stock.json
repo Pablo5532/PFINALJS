@@ -1,0 +1,57 @@
+
+[
+    {
+        "id": 125,
+        "img": "../assets/img/zapatoH1N.jpg",
+        "title": "Zapato de Gala Masculino",
+        "description": "Elegantes y atemporales, estos zapatos masculinos de gala destacan por su diseño clásico, cuero de alta calidad y detalles finamente elaborados, perfectos para ocasiones formales.",
+        "color": "Negro",
+        "Stock": 1,
+        "price": "$36.700"
+    },
+    {
+        "id": 130,
+        "img": "../assets/img/zapatoH1M.jpg",
+        "title": "Zapato de Gala Masculino",
+        "description": "Estos zapatos de gala para hombre fusionan estilo y lujo, presentando un diseño pulido, piel genuina y una construcción duradera, brindando un toque refinado a cualquier traje formal.",
+        "color": "Marrón",
+        "Stock": 1,
+        "price": "$40.670"
+    },
+    {
+        "id": 135,
+        "img": "../assets/img/zapatoH2N.jpg",
+        "title": "Zapato Formal Masculino",
+        "description": "Un par de zapatos de gala para hombres que combina sofisticación y comodidad, con suave piel, meticulosos detalles de costura y una suela resistente, ideal para eventos elegantes.",
+        "color": "Negro",
+        "Stock": 1,
+        "price": "$29.200"
+    },
+    {
+        "id": 140,
+        "img": "../assets/img/zapatoM1N.jpg",
+        "title": "Zapato de Gala Femenino con Taco Aguja",
+        "description": "Diseñados para la mujer elegante, estos zapatos de gala femeninos destacan por su glamuroso tacón, detalles de pedrería exquisitos y una silueta que realza la feminidad en eventos especiales.",
+        "color": "Negro",
+        "Stock": 1,
+        "price": "$35.300"
+    },
+    {
+        "id": 145,
+        "img": "../assets/img/zapatoM1B.jpg",
+        "title": "Zapato de Gala Femenino Taco Mediano",
+        "description": "Con un toque de glamour, estos zapatos de gala para mujeres presentan un dFemeninoisticado, materiales de alta calidad y un tacón elegante, complementando a la perfección vestidos de noche y ocasiones formales.",
+        "color": "Beige",
+        "Stock": 1,
+        "price": "$39.250"
+    },
+    {
+        "id": 150,
+        "img": "../assets/img/zapatoM2N.jpg",
+        "title": "Zapato de Gala Femenino",
+        "description": "Elegancia y comodidad se fusionan en estos zapatos de gala femeninos, con detalles de encaje, un tacón estilizado y una suela acolchada, creando la combinación perfecta para lucir radiante en eventos especiales.",
+        "color": "Negro",
+        "Stock": 1,
+        "price": "$52.500"
+    }
+]
