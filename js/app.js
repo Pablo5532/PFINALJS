@@ -147,6 +147,34 @@ const actualizarCarrito = (carrito) => {
     });
 };
 
+const guardarCarritoEnLocalStorage = (carrito) => {
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+};
+
+const validarProducCarrito = async (idProducto) => {
+    const data = await getData();
+    const repetido = carrito.find(producto => producto.id == idProducto)
+
+    if (!repetido) {
+        const producto = await data.find(producto => producto.id == idProducto);
+        carrito.push(producto)
+        pintarProductosCarrito(producto)
+        actualizarTotalCarrito(carrito)
+    } else {
+        repetido.Stock++
+        const cantProducto = document.getElementById(`cantCarrito${repetido.id}`)
+        cantProducto.innerHTML = `Cantidad: ${repetido.Stock}`
+        actualizarTotalCarrito(carrito);
+    }
+
+    guardarCarritoEnLocalStorage(carrito);
+};
+
+
+
+
+
+
 window.addEventListener('scroll', function() {
     const nav = document.querySelector('nav');
     if (window.scrollY > 200) { // Cambia este valor según tus necesidades
@@ -155,3 +183,32 @@ window.addEventListener('scroll', function() {
         nav.classList.remove('scroll');
     }
 });
+
+
+
+
+const btnContinuar = document.getElementById("continuar");
+
+btnContinuar.addEventListener("click" , () => {
+    if (carrito.length === 0) {
+        Swal.fire('Carrito vacío');
+    } else {
+        Swal.fire({
+            title: "Ingrese su Nombre Y Apellido para registrar el pedido",
+            input: "text",
+            inputValue: name,
+            showCancelButton: true,
+            inputValidator: (value) => {
+                if (!value) {
+                    return "Ingrese un Nombre y Apellido"
+                }
+            }
+        })
+        .then(resultado => {
+            if (resultado.value) {
+                Swal.fire(`Se a registrado el pedido a nombre de: ${resultado.value}`);
+                guardarCarritoEnLocalStorage(carrito);
+            }
+        })
+    }
+}) 

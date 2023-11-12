@@ -92,9 +92,6 @@ nav{
     cursor: pointer;
 }
 
-.price{
-    text-decoration-line: line-through;
-}
 
 .carrito img{
     width: 55px;
@@ -109,6 +106,7 @@ nav{
 .btn__carrito{
     border: none;
     cursor: pointer;
+    background-color: #633232;
     
 }
 
